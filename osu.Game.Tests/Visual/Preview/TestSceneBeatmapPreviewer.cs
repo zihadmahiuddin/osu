@@ -69,7 +69,6 @@ namespace osu.Game.Tests.Visual.Preview
             testRuleset(() => new OsuRuleset());
         }
 
-        // TODO: implement previewer for this ruleset
         [Test]
         public void TestManiaBeatmapPreview()
         {

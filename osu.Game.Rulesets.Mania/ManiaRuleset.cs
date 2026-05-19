@@ -25,6 +25,7 @@ using osu.Game.Rulesets.Mania.Difficulty;
 using osu.Game.Rulesets.Mania.Edit;
 using osu.Game.Rulesets.Mania.Edit.Setup;
 using osu.Game.Rulesets.Mania.Mods;
+using osu.Game.Rulesets.Mania.Preview;
 using osu.Game.Rulesets.Mania.Replays;
 using osu.Game.Rulesets.Mania.Scoring;
 using osu.Game.Rulesets.Mania.Skinning.Argon;
@@ -32,6 +33,7 @@ using osu.Game.Rulesets.Mania.Skinning.Default;
 using osu.Game.Rulesets.Mania.Skinning.Legacy;
 using osu.Game.Rulesets.Mania.UI;
 using osu.Game.Rulesets.Mods;
+using osu.Game.Rulesets.Preview;
 using osu.Game.Rulesets.Replays.Types;
 using osu.Game.Rulesets.Scoring;
 using osu.Game.Rulesets.Scoring.Legacy;
@@ -65,6 +67,7 @@ namespace osu.Game.Rulesets.Mania
         public override string RulesetAPIVersionSupported => CURRENT_RULESET_API_VERSION;
 
         public override HitObjectComposer CreateHitObjectComposer() => new ManiaHitObjectComposer(this);
+        public override BeatmapPreviewer CreateBeatmapPreviewer() => new ManiaBeatmapPreviewer(this);
 
         public override IBeatmapVerifier CreateBeatmapVerifier() => new ManiaBeatmapVerifier();
 
