@@ -35,9 +35,11 @@ using osu.Game.Skinning;
 using osu.Game.Rulesets.Configuration;
 using osu.Game.Configuration;
 using osu.Game.Localisation;
+using osu.Game.Rulesets.Preview;
 using osu.Game.Rulesets.Scoring.Legacy;
 using osu.Game.Rulesets.Taiko.Configuration;
 using osu.Game.Rulesets.Taiko.Edit.Setup;
+using osu.Game.Rulesets.Taiko.Preview;
 using osu.Game.Rulesets.Taiko.Skinning.Default;
 using osu.Game.Screens.Edit.Setup;
 using osu.Game.Utils;
@@ -199,6 +201,8 @@ namespace osu.Game.Rulesets.Taiko
         public override Drawable CreateIcon() => new SpriteIcon { Icon = OsuIcon.RulesetTaiko };
 
         public override HitObjectComposer CreateHitObjectComposer() => new TaikoHitObjectComposer(this);
+
+        public override BeatmapPreviewer CreateBeatmapPreviewer() => new TaikoBeatmapPreviewer(this);
 
         public override IEnumerable<Drawable> CreateEditorSetupSections() =>
         [

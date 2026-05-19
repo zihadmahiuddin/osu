@@ -75,7 +75,6 @@ namespace osu.Game.Tests.Visual.Preview
             testRuleset(() => new ManiaRuleset());
         }
 
-        // TODO: implement previewer for this ruleset
         [Test]
         public void TestTaikoBeatmapPreview()
         {
