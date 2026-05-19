@@ -63,7 +63,6 @@ namespace osu.Game.Tests.Visual.Preview
             });
         }
 
-        // TODO: implement previewer for this ruleset
         [Test]
         public void TestOsuBeatmapPreview()
         {

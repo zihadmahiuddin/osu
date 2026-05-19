@@ -29,6 +29,7 @@ using osu.Game.Rulesets.Osu.Edit;
 using osu.Game.Rulesets.Osu.Edit.Setup;
 using osu.Game.Rulesets.Osu.Mods;
 using osu.Game.Rulesets.Osu.Objects;
+using osu.Game.Rulesets.Osu.Preview;
 using osu.Game.Rulesets.Osu.Replays;
 using osu.Game.Rulesets.Osu.Scoring;
 using osu.Game.Rulesets.Osu.Skinning.Argon;
@@ -36,6 +37,7 @@ using osu.Game.Rulesets.Osu.Skinning.Default;
 using osu.Game.Rulesets.Osu.Skinning.Legacy;
 using osu.Game.Rulesets.Osu.Statistics;
 using osu.Game.Rulesets.Osu.UI;
+using osu.Game.Rulesets.Preview;
 using osu.Game.Rulesets.Replays.Types;
 using osu.Game.Rulesets.Scoring;
 using osu.Game.Rulesets.Scoring.Legacy;
@@ -243,6 +245,8 @@ namespace osu.Game.Rulesets.Osu
         public override PerformanceCalculator CreatePerformanceCalculator() => new OsuPerformanceCalculator();
 
         public override HitObjectComposer CreateHitObjectComposer() => new OsuHitObjectComposer(this);
+
+        public override BeatmapPreviewer CreateBeatmapPreviewer() => new OsuBeatmapPreviewer(this);
 
         public override IBeatmapVerifier CreateBeatmapVerifier() => new OsuBeatmapVerifier();
 
