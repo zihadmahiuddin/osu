@@ -25,6 +25,7 @@ using osu.Game.Rulesets.Difficulty;
 using osu.Game.Rulesets.Edit;
 using osu.Game.Rulesets.Filter;
 using osu.Game.Rulesets.Mods;
+using osu.Game.Rulesets.Preview;
 using osu.Game.Rulesets.Replays.Types;
 using osu.Game.Rulesets.Scoring;
 using osu.Game.Rulesets.UI;
@@ -278,6 +279,7 @@ namespace osu.Game.Rulesets
         public virtual PerformanceCalculator? CreatePerformanceCalculator() => null;
 
         public virtual HitObjectComposer? CreateHitObjectComposer() => null;
+        public virtual BeatmapPreviewer? CreateBeatmapPreviewer() => null;
 
         public virtual IBeatmapVerifier? CreateBeatmapVerifier() => null;
 
