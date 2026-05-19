@@ -81,7 +81,8 @@ namespace osu.Game.Tests.Visual.Preview
             testRuleset(() => new TaikoRuleset());
         }
 
-        // TODO: implement previewer for this ruleset
+        // TODO: some objects might be appearing outside the playfield boundary?
+        // TODO: I don't play catch so I can't tell if it's normal
         [Test]
         public void TestCatchBeatmapPreview()
         {

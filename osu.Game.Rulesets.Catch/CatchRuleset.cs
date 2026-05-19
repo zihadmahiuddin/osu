@@ -19,6 +19,7 @@ using osu.Game.Rulesets.Catch.Edit;
 using osu.Game.Rulesets.Catch.Edit.Setup;
 using osu.Game.Rulesets.Catch.Mods;
 using osu.Game.Rulesets.Catch.Objects;
+using osu.Game.Rulesets.Catch.Preview;
 using osu.Game.Rulesets.Catch.Replays;
 using osu.Game.Rulesets.Catch.Scoring;
 using osu.Game.Rulesets.Catch.Skinning.Argon;
@@ -28,6 +29,7 @@ using osu.Game.Rulesets.Difficulty;
 using osu.Game.Rulesets.Edit;
 using osu.Game.Rulesets.Mods;
 using osu.Game.Rulesets.Objects.Legacy;
+using osu.Game.Rulesets.Preview;
 using osu.Game.Rulesets.Replays.Types;
 using osu.Game.Rulesets.Scoring;
 using osu.Game.Rulesets.Scoring.Legacy;
@@ -238,6 +240,8 @@ namespace osu.Game.Rulesets.Catch
         public override IConvertibleReplayFrame CreateConvertibleReplayFrame() => new CatchReplayFrame();
 
         public override HitObjectComposer CreateHitObjectComposer() => new CatchHitObjectComposer(this);
+
+        public override BeatmapPreviewer? CreateBeatmapPreviewer() => new CatchBeatmapPreviewer(this);
 
         public override IEnumerable<Drawable> CreateEditorSetupSections() =>
         [
